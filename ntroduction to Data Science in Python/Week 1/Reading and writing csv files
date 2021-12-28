@@ -1,0 +1,55 @@
+import csv
+
+%precision 2 # controls how floats display (in this case they show 2 decimal cases)
+
+with open("mpg.csv") as csvfile:
+ mpg = list(csv.DictReader(csvfile))
+ 
+mpg[:3] # shows the first 3 rows of the csv file in dictionary form
+
+len(mpg) #shows count of rows in csv file
+
+mpg[0].keys() #would show the dictionary keys that you have linked to line 0
+
+sum(float([d"cty"]) for d in mpg / len(mpg) #this sums all of the values from 
+the dictionary key "cty" and then divides it for all of the available rows giving
+us the average
+
+
+
+
+
+#calculating averages
+
+
+cylinders = set(d["cyl"] for d in mpg) # this gives you all of the possible values 
+for the row "cyl"
+
+CtyMpgByCy1 = []
+
+for c in cylinders:     # this will create the average for "cty" for every cylinder type
+  summpg=0
+  cyltypecount = 0
+  for d in mpg:
+   if d["cyl"] == c:
+    summpg += fload(d["cty"])
+    cyltypecount += 1
+  CtyMpgByCy.append((c, summpg / cyltypecount))
+  
+ CtyMpgByCy1.sort(key=lambda x: x[0])
+ 
+ 
+ vehicleclass = set(d["class"] for d in mpg)
+ 
+ HwyMpgByClass = []
+ 
+ for t in vehicleclass:
+  summpg = 0
+  vclasscount = 0
+  for d in mpg:
+   if d["class"] == t:
+    summpg += fload(d["hwy"])
+    vclasscount += 1
+   HwyMpgByClass.append((t, summpg/vclasscount))
+   
+  HwyMpgByClass.sort(key=malbda x: x[1])
