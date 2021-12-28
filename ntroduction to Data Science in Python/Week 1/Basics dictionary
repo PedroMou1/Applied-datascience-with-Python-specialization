@@ -1,0 +1,18 @@
+x = {"Christopher Brooks": "brooksch@unich.edu", "Bill Gates": "billg@microsoft.com"}
+x{"Crishtioper Brooks"} # the result is the linked value ("brooksch@unich.edu")
+
+for name in x:
+ print(x(name)) # iterates and prints all of the values
+ 
+ for email in x.values():
+  print(email) # iterates and prints through all of the keys
+  
+ for name, email in x.items():
+  print(name)
+  print(email)
+   
+ x = ("Christopher", "Brooks", "brooksch@umich.edu")
+ fname, lname, email = x # this is called unpacking and is very usefull to asign variables
+ 
+ 
+ 
