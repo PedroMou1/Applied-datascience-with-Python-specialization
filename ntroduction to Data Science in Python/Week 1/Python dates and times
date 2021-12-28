@@ -1,0 +1,16 @@
+import datetime as dt
+import time as tm
+
+tm.time()
+
+dt.now = dt.datetime.fromtimestamp(tm.time())
+
+dtnow.year, dtnow.month, denow.day, dtnow.day, dtnow.hour, dtnow.minute, dtnow.second
+# it gives the year, month, day, hour, minute, second
+
+delta = dt.timedelta(days = 100)
+
+today = dt.data.today()
+
+today - delta #goes 100 days in the past
+
