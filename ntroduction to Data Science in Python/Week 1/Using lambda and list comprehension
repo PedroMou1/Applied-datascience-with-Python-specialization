@@ -9,3 +9,21 @@ for person in people:
 
 #option 2
 list(map(split_title_and_name, people)) == list(map(lambda person: person.split()[0] + ' ' + person.split()[-1], people))
+
+
+######################
+
+my_list = [number for number in range(0,1000) if number % 2 == 0] # instead of doing a 
+whole cycle with 3 lines just do it like this 
+
+
+#######
+
+def times_tables():
+    lst = []
+    for i in range(10):
+        for j in range (10):
+            lst.append(i*j)
+    return lst
+
+times_tables() == [j*i for i in range(10) for j in range(10)]
